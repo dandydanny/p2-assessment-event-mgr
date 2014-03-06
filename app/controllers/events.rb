@@ -48,11 +48,16 @@ end
 
 get '/edit_event/:event_id' do
   @event = Event.find(params[:event_id])
+  # process time string so it is useable as datetime-local default value
+  @start = @event.starts_at.strftime("%FT%T")
+  @end = @event.ends_at.strftime("%FT%T")
   erb :edit_event
 end
 
 post '/edit_event/:event_id' do
   @event = Event.find(params[:event_id])
+  puts "============================"
+  p params
   @event.update_attributes(name: params[:name], location: params[:location], starts_at: params[:starts_at], ends_at: params[:ends_at])
   redirect('/dashboard')
 end
