@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 
+  <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
     See: http://necolas.github.com/normalize.css/
@@ -9,9 +9,14 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/application.css">
 
-  <title></title>
+  <title>Event</title>
 </head>
 <body>
+  <div class="nav">
+    <div class="logo"><a href="/dashboard">Event</a></div>
+    <div class="user-tools"><a href="/about">About</a>
+    <% if current_user %><a href="/logout">Log Out</a><% end %></div>
+  </div>
   <%= yield %>
 </body>
 </html>
