@@ -1,25 +1,22 @@
 <div class="container">
-  <h1>Dashboard</h1>
-  <p>Welcome back <%= current_user.first_name %> <%= current_user.last_name %>.</p>
+  <h1>Your Events</h1>
+  <p>Events created by <%= current_user.first_name %>.</p>
 
   <a href="/create_event">Create an event</a><br>
-  <a href="/your_events">Events you've created</a><br>
   <a href="/edit_event">Edit an event (should be in /your_events)</a><br>
   <a href="/cancel_event">Cancel an event (should be in /your_events)</a><br>
 
-  <h3>Everyone's events (that you can attend)</h3>
+  <h3>Events created by you:</h3>
 
   <table>
     <tr>
       <td>Event Name</td>
-      <td>Host</td>
       <td>Attended?</td>
       <td></td>
     </tr>
       <% @events.each do |event| %>
         <tr>
          <td><%= event.name %></td>
-         <td><%= event.user.first_name %></td>
          <td><%= event.name %></td>
          <td>Attend!</td>
         </tr>

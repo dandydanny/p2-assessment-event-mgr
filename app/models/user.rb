@@ -8,6 +8,9 @@ class User < ActiveRecord::Base
   has_many :event_attendances
   has_many :events, through: :event_attendances
 
+
+
+
   include BCrypt
 
   # users.password_hash in the database is a :string

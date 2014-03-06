@@ -56,3 +56,28 @@ a:hover {
 .nav .user-tools a {
   margin-left: 2em;
 }
+
+tr {
+  border-top: 1px solid white;
+}
+tr:first-child {
+  border: none;
+  font-weight: 400;
+}
+
+tr:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+
+td {
+  /*margin: 1em;*/
+  padding: 0.2em .5em;
+  border: 1px solid gray;
+  /*background-color: pink;*/
+  /*width: 50%;*/
+}
+
+/*td:first-child {
+  border-right: 1px solid white;
+}*/
