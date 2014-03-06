@@ -17,8 +17,8 @@ Event.create!(  :user_id    => 1,
                 :starts_at  => "2014/3/8 10AM",
                 :ends_at  => "2014/3/8 2PM")
 
-# Create 499 other users
-users = 499.times.map do
+# Create 50 other users
+users = 50.times.map do
   User.create!( :first_name => Faker::Name.first_name,
                 :last_name  => Faker::Name.last_name,
                 :email      => Faker::Internet.email,
@@ -26,8 +26,8 @@ users = 499.times.map do
                 :password   => "password")
 end
 
-# Create 100 events
-100.times do
+# Create 20 events
+20.times do
   start_time = Time.now + (rand(61) - 30).days
   end_time   = start_time + (1 + rand(6)).hours
 

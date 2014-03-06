@@ -3,8 +3,6 @@
   <p>Events created by <%= current_user.first_name %>.</p>
 
   <a href="/create_event">Create an event</a><br>
-  <a href="/edit_event">Edit an event (should be in /your_events)</a><br>
-  <a href="/cancel_event">Cancel an event (should be in /your_events)</a><br>
 
   <h3>Events created by you:</h3>
 
@@ -13,15 +11,16 @@
       <td>Event Name</td>
       <td>Attended?</td>
       <td></td>
+      <td></td>
     </tr>
       <% @events.each do |event| %>
         <tr>
          <td><%= event.name %></td>
          <td><%= event.name %></td>
-         <td>Attend!</td>
+         <td><a href="/edit_event/<%= event.id %>">Edit</a></td>
+         <td><a href="/cancel_event/<%= event.id %>">Cancel this event</a></td>
         </tr>
       <% end %>
   <table>
-
 
 </div>

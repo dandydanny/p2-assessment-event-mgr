@@ -39,13 +39,3 @@ get '/dashboard' do
     erb :index
   end
 end
-
-get '/your_events' do
-  if current_user
-    @events = created_events
-    erb :your_events
-  else
-    @error = "Please login first."
-    erb :index
-  end
-end

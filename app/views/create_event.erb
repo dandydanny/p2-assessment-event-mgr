@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Create Event</h1>
+  <p>Welcome back <%= current_user.first_name %> <%= current_user.last_name %>.</p>
+
+  <a href="/your_events">Events you've created</a><br>
+  <a href="/edit_event">Edit an event (should be in /your_events)</a><br>
+  <a href="/cancel_event">Cancel an event (should be in /your_events)</a><br>
+
+  <h3>Create a new event</h3>
+
+  <form class="signup-forms" id="create_form" action="/create_event" method="POST">
+    <input type="text" name="name" placeholder="Event Name" class="input-fields" id="create_name"><br>
+    <input type="text" name="location" placeholder="Locaiton" class="input-fields" id="create_location"><br>
+    <input type="datetime-local" name="start_time" placeholder="Start Time" class="input-fields" id="create_start"> - Start time<br>
+    <input type="datetime-local" name="end_time" placeholder="End Time" class="input-fields" id="create_end"> - End time<br>
+    <button type="submit" name="buttons" id="create_button">Create this event</button>
+  </form>
+
+
+</div>

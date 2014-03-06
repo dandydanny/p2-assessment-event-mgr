@@ -6,6 +6,6 @@ helpers do
 
   # Return a list of events attended by the current_user
   def attended_events
-    current_user.event_attendances
+    EventAttendance.where(user_id: current_user.id)
   end
 end

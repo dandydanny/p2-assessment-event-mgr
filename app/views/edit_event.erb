@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Edit Event</h1>
+  <p><%= @event.name %> created by <%= @event.user.first_name %> </p>
+
+  <h3>Editing <%= @event.name %>.</h3>
+
+  <form action="/edit_event/<%= @event.id %>" method="POST">
+    <input type="text", name="name", value="<%= @event.name %>" class="input-fields"><br>
+    <input type="text", name="location", value="<%= @event.location %>" class="input-fields"><br>
+    Start time (originally <%= @event.starts_at %>)<br>
+    <input type="datetime-local" name="starts_at" value="<%= @event.starts_at %>" class="input-fields" id="create_start"><br>
+    End time (originally <%= @event.starts_at %>)<br>
+    <input type="datetime-local" name="ends_at" value="<%= @event.ends_at %>" class="input-fields" id="create_end"><br><br>
+    <button type="submit">Save changes</button>
+  </form>
+
+</div>
