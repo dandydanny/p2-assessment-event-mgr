@@ -5,11 +5,15 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 4 } # doesn't work
   validates :password, presence: true
 
+  # has_many :events, through: :event_attendances
+  # Think created_events and attended_events renamed aliases of event
+  # use class_name: <class name> to tell AR what it is
+  # if through join table, use source: ""
+  # (Alyssa brought this up earlier in the week)
+
+  has_many :created_events, class_name: "Event"
   has_many :event_attendances
-  has_many :events, through: :event_attendances
-
-
-
+  has_many :attended_events, through: :event_attendances, source: :event
 
   include BCrypt
 

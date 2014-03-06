@@ -24,10 +24,10 @@
          <td><%= event.starts_at %></td>
          <td><%= event.ends_at %></td>
          <td>
-            <% if @attendances.where(event_id: event.id).first != nil %>
-              <span>Yes</span>
-            <% else %>
+            <% if @attendances.where(id: event.id).empty? %>
               <a href="/attend_event/<%= event.id %>">Attend</span>
+            <% else %>
+              <span>Yes</span>
             <% end %>
          </td>
         </tr>

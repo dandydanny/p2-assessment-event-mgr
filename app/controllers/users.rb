@@ -31,7 +31,7 @@ end
 
 get '/dashboard' do
   if current_user
-    @attendances = attended_events
+    @attendances = current_user.attended_events
     @events = Event.all
     erb :dashboard
   else

@@ -16,14 +16,14 @@ $(document).ready(function() {
   console.log(eventName);
   console.log(eventLocation);
   console.log(eventStart);
-  console.log(eventEnd);
+  console.log(eventLocation);
 
-  //   $.ajax({
-  //     type: "POST",
-  //     url: "/add",
-  //     dataType: 'json',
-  //     data: {name: teaName, location: teaOpinion},
-  //   }).done(function(msg) {
+    $.ajax({
+      type: "POST",
+      url: "/add",
+      dataType: 'json',
+      data: {name: teaName, location: teaOpinion},
+    }).done(function(msg) {
 
 
   });

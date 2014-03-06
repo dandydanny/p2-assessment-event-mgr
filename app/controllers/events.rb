@@ -17,8 +17,8 @@ end
 
 get '/your_events' do
   if current_user
-    @events = created_events
-    @attendances = attended_events
+    @events = current_user.created_events
+    @attendances = current_user.attended_events
     erb :your_events
   else
     @error = "Please login first."
@@ -28,7 +28,7 @@ end
 
 get '/attended_events' do
   if current_user
-    @events = attended_events
+    @events = current_user.attended_events
     erb :attended_events
   else
     @error = "Please login first."
