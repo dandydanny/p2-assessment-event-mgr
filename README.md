@@ -1,3 +1,10 @@
+Event Managr
+============
+
+A event attendance tracker written in Ruby utilizing Sinatra.
+
+Original project requirements below:
+
 # Events Management Application
 By now you should be familiar with basic sinatra apps and creating simple websites.  This problem will give you a chance to demonstrate your proficiency with the web by writing code for controllers, authentication, views, and basic HTML forms with a little bit of CSS. We're going full [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) and building a simple event-management application.
 
